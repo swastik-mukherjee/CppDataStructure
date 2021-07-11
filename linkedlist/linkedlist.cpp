@@ -31,6 +31,21 @@ void insertAtEnd(node *&head, int val)
     }
     temp->nextNodepointer = tempNode;
 }
+void insertAtHead(node *&head, int data)
+{
+    node *tmp;
+    tmp->nextNodepointer = head;
+    head = tmp;
+}
+void displayNodes(node *head)
+{
+    node *tmp = head;
+    while (!tmp)
+    {
+        cout << head->data << endl;
+        tmp = tmp->nextNodepointer;
+    }
+}
 
 int main()
 {
